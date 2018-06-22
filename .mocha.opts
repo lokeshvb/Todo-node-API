@@ -1,0 +1,2 @@
+server/**/**/**/*-test.js
+--timeout=5000

@@ -1,4 +1,3 @@
-// require('./config/config');
 const config = require('./utils/config');
 const {setup} = require('./api/route');
 
@@ -16,5 +15,7 @@ const routes =  setup();
 app.use(routes);
 
 app.listen(config.get('port'), () => {
-  console.log(`Started up at port ${config.get('port')}`);
+  console.log(`Started from app.js up at port ${config.get('port')}`);
 });
+
+module.exports = {app};
