@@ -10,7 +10,8 @@ module.exports.getTodos = async (req, res) => {
   }, (e) => {
     res.status(HttpStatus.INTERNAL_SERVER_ERROR)
     .send({
-        error: "We could not able to retrive any Todos for now."
+        error: HttpStatus.getStatusText(HttpStatus.INTERNAL_SERVER_ERROR),
+        description: "We could not able to retrive any Todos for now."
     });
   });
 }

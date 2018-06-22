@@ -10,7 +10,8 @@ module.exports.getBooks = async (req, res) => {
   }, (e) => {
     res.status(HttpStatus.INTERNAL_SERVER_ERROR)
     .send({
-        error: "We could not able to retrive any Books for now."
+        error: HttpStatus.INTERNAL_SERVER_ERROR,
+        description: "We could not able to retrive any Books for now."
     });
   });
 }
