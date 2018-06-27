@@ -11,6 +11,16 @@ const { patchBookbyID } = require('./Book/book-controller');
 
 
 const getRoutes = () => ({
+  /*
+ * @api [get] /todos
+ * scope: public
+ * description: "Returns all pets from the system that the user has access to"
+ * responses:
+ *   "200":
+ *     description: "A list of pets."
+ *     schema:
+ *       type: "String"
+ */
   '/api/todos': [ getTodos ],
   '/api/todos/:id': [ getTodosbyID ],
   '/api/books': [ getBooks ],
