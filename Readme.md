@@ -1,6 +1,16 @@
-# Books and Notes keeping APIs
+# Books and Todo Notes Management.
 
-These API's helps you to store the details of the books you have. You can create, find, delete and update the details of your Books, you can create action items and store it as Notes. Once you completed action items, you can mark the Note as completed.
+Helps to store the details of the books you have. You can create, find, delete and update the details of your Books, you can create action items and store it as Notes. Once you completed action items, you can mark the Note as completed.
+
+## Packages Used
+
+1) Express
+2) Mongoose
+3) Convict
+4) Swagger-ui-express
+5) Istanbul (nyc)
+6) Http-status-code
+7) SuperTest
 
 ## Getting Started
 
@@ -52,7 +62,29 @@ GET /api/books/:id
   ```
 
   ##### Running the coverage.
-  `C:\Users\blokesh\Web_dev\NODE\Node_Todo_API>npm run coverage`
+  ```C:\Users\blokesh\Web_dev\NODE\Node_Todo_API>npm run coverage
+
+---------------------|----------|----------|----------|----------|-------------------|
+File                 |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+---------------------|----------|----------|----------|----------|-------------------|
+All files            |    91.19 |    86.11 |    75.61 |    90.91 |                   |
+ server              |      100 |      100 |      100 |      100 |                   |
+  app.js             |      100 |      100 |      100 |      100 |                   |
+ server/api          |      100 |     87.5 |      100 |      100 |                   |
+  route.js           |      100 |     87.5 |      100 |      100 |                66 |
+ server/api/Book     |    83.72 |    83.33 |    68.75 |    83.72 |                   |
+  book-controller.js |    83.72 |    83.33 |    68.75 |    83.72 |... ,87,99,107,114 |
+ server/api/todo     |    85.11 |     87.5 |    68.75 |    85.11 |                   |
+  todo-controller.js |    85.11 |     87.5 |    68.75 |    85.11 |... ,84,96,111,118 |
+ server/db           |      100 |      100 |      100 |      100 |                   |
+  mongoose_config.js |      100 |      100 |      100 |      100 |                   |
+ server/models       |      100 |      100 |      100 |      100 |                   |
+  Book.js            |      100 |      100 |      100 |      100 |                   |
+  Todo.js            |      100 |      100 |      100 |      100 |                   |
+ server/utils        |      100 |      100 |      100 |      100 |                   |
+  config.js          |      100 |      100 |      100 |      100 |                   |
+---------------------|----------|----------|----------|----------|-------------------|
+```
 
   ##### Viewing the coverage results.
-  you can find the results in browsing the file `coverage\lcov-report\index.html` in project directory.  
+  you can also find the results in browsing the file `coverage\lcov-report\index.html` in project directory.  
